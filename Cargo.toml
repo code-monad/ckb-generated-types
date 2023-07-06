@@ -1,0 +1,18 @@
+[package]
+name = "ckb-generated-types"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "CKB blockchain "
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["std"]
+calc-hash = ["blake2b-ref"]
+std = ["molecule/std"]
+
+[dependencies]
+molecule = { version = "0.7.5", default-features = false }
+cfg-if = "1.0"
+blake2b-ref = { version = "0.3.1", default-features = false, optional = true }
